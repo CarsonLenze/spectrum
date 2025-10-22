@@ -67,8 +67,8 @@ func (NopProcessor) ProcessServerEncoded(_ *Context, _ *[]byte)              {}
 func (NopProcessor) ProcessClient(_ *Context, _ *packet.Packet)              {}
 func (NopProcessor) ProcessClientEncoded(_ *Context, _ *[]byte)              {}
 func (NopProcessor) ProcessFlush(_ *Context)                                 {}
-func (NopProcessor) ProcessDiscover(_ *Context)                              {}
-func (NopProcessor) ProcessDiscoverFallback(_ *Context)                      {}
+func (NopProcessor) ProcessDiscover(_ *Context, target *string)              {}
+func (NopProcessor) ProcessDiscoverFallback(_ *Context, target *string)      {}
 func (NopProcessor) ProcessPreTransfer(_ *Context, _ *string, _ *string)     {}
 func (NopProcessor) ProcessTransferFailure(_ *Context, _ *string, _ *string) {}
 func (NopProcessor) ProcessPostTransfer(_ *Context, _ *string, _ *string)    {}
